@@ -1,0 +1,32 @@
+<div id="registration-container" class="container-fluid">
+  <h1>Register</h1>
+  <form #registrationForm="ngForm" class="form-inline" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" class="form-control" id="firstname" required
+             [(ngModel)]="registration.firstName" name="firstname" #name="ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" class="form-control" id="lastname" required
+             [(ngModel)]="registration.lastName" name="lastname" #name="ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label for="lastname">Email:</label>
+      <input type="email" class="form-control" id="email" required
+             [(ngModel)]="registration.email" name="email" #name="ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <select class="form-control" id="role" required
+        [(ngModel)]="registration.participantType" name="role" #name="ngModel">
+        <option *ngFor="let rol of roles" [value]="rol">{{rol}}</option>
+      </select>
+    </div>
+    <input type="submit" class="btn btn-success" value="Register">
+  </form>
+  <div id="registration-response"></div>
+</div>
