@@ -3,17 +3,8 @@ h1 {
 }
 
 #options {
-  margin: 50px auto 30px auto;
+  margin: 20px auto 20px auto;
+  width: 600px;
 }
 
-#login-option, #register-option {
-  height: 150px;
-  line-height: 140px;
-  border: solid black 2px;
-  text-align: center;
-}
-
-#login-option a, #register-option a {
-  font-size: 2em;
-}
 

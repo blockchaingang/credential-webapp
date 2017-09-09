@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.loginService.login(this.userID, this.actualUserSecret).subscribe( r => {
+      console.log(r);
       sessionStorage.setItem('token', r.json().token);
       return this.router.navigate(['/manage']);
     });

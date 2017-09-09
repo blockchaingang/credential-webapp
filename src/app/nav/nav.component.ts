@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 
 export class NavComponent {
   title = 'Credential Manager';
+  isLoggedIn = false;
+  displayName = null;
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
+
 }

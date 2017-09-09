@@ -48,10 +48,6 @@ import {ManageComponent} from '../../../credentialwebapp/src/app/manage/manage.c
         component: IDCardComponent
       },
       {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
         path: 'manage',
         component: ManageComponent
       }

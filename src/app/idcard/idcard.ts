@@ -23,9 +23,10 @@ export class IDCard {
 
   save(name: string) {
     localStorage.setItem(name, JSON.stringify(this));
-    let walletList = localStorage.get('WalletList');
-    if (walletList == null) {
-      walletList = [];
+    let walletList = [];
+    const walletListString = localStorage.getItem('WalletList');
+    if (walletListString != null) {
+      walletList = JSON.parse(walletListString);
     }
     walletList.push(name);
     localStorage.setItem('WalletList', JSON.stringify(walletList));
