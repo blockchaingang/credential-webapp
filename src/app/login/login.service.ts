@@ -13,7 +13,7 @@ export class LoginService {
   login(userID: String, userSecret: String): Observable<Response> {
     return this.http
       .post(
-        'http://localhost:3000/sessions',
+        'http://52.2.32.157:3000/sessions',
         JSON.stringify({
           userID: userID,
           userSecret: userSecret
@@ -33,4 +33,3 @@ export class LoginService {
 
 
 }
-

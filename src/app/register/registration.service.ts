@@ -15,7 +15,7 @@ export class RegistrationService {
   register(registration: Registration): Observable<Response> {
     return this.http
       .post(
-        'http://localhost:3000/users',
+        'http://52.2.32.157:3000/users',
         JSON.stringify(registration),
         {headers: this.getHeaders()}
       );
@@ -32,4 +32,3 @@ export class RegistrationService {
 
 
 }
-
